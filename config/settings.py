@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     # apps
     'api',
     'common',
+    'breaks',
     # after apps
     'drf_spectacular',
 ]
