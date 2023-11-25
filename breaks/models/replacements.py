@@ -4,19 +4,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
-class ReplacementStatus(models.Model):
-    code = models.CharField('код', max_length=16, primary_key=True)
-    name = models.CharField('Название', max_length=32,)
-    sort = models.PositiveSmallIntegerField('Сортировка', null=True, blank=True)
-    is_active = models.BooleanField('Активность', default=True)
-    class Meta:
-        verbose_name = 'стаус смены'
-        verbose_name_plural = 'статусы смены'
-        ordering = ('sort',)
 
-    def __str__(self) -> str:
-        return f'{self.code} - {self.name}'
-    
 
 
 class Replacement(models.Model):
